@@ -18,11 +18,11 @@ class ViewController: UIViewController {
 
      @IBAction func bButtonClicked(_ sender: UIButton) {
         
-        playSound(let: sender.currentTitle)
+        playSound(type: sender.currentTitle)
            
        }
     
-    func playSound(`let` type : String?) {
+    func playSound(type : String?) {
         let url = Bundle.main.url(forResource: type, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
